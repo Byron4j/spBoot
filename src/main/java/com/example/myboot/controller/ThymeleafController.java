@@ -23,4 +23,10 @@ public class ThymeleafController {
         return "hello";
     }
 
+    @RequestMapping("/thymeleaf")
+    public String thymeleafTest(Locale locale, Model model) {
+
+        return "thymeleaf";
+    }
+
 }

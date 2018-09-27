@@ -26,12 +26,7 @@ import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
 
-/**
- * Redis 配置类
- *
- * @author Leon
- * @version 2018/6/17 17:46
- */
+
 @Configuration
 // 必须加，使配置生效
 @EnableCaching
