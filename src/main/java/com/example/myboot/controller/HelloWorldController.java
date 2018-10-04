@@ -11,7 +11,7 @@ public class HelloWorldController {
     @Autowired
     FefiProperties fefiProperties;
 
-    @RequestMapping("/index")
+    @RequestMapping("/")
     public String sayHello(){
         return JSONObject.fromObject(fefiProperties).toString();
     }

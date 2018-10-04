@@ -39,5 +39,5 @@ public interface UserRepository extends JpaRepository<User, Long> {
     自定义SQL查询
      */
     @Query("select u from User u where u.id = ?1")
-    Integer findUserById(Long id);
+    User findUserById(Long id);
 }
