@@ -34,4 +34,13 @@ public interface UserMapper {
     @Delete("DELETE FROM user WHERE id =#{id}")
     void delete(Long id);
 
+
+
+
+    /*
+    非注解方式的SQL
+     */
+
+    List<User> selectByCnd(User record);
+
 }

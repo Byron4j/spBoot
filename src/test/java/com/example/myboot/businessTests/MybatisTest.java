@@ -1,5 +1,6 @@
 package com.example.myboot.businessTests;
 
+import com.example.myboot.domain.User;
 import com.example.myboot.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,5 +19,12 @@ public class MybatisTest {
     @Test
     public void test(){
         System.out.println("基于mybatis注解方式查询User：" + userMapper.getAll());
+    }
+
+    @Test
+    public void test2(){
+        System.out.println("基于mybatis XML配置方式查询User：" + userMapper.selectByCnd(User.builder()
+                .userName("aa1")
+                .build()));
     }
 }
