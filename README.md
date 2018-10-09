@@ -18,3 +18,11 @@ SpringBoot 系列笔记
 - 写XXXmapper.java
 - 写XXXmapper.xml
 - 单元测试
+
+
+### mybatis 多数据源集成
+
+- 多个数据库配置信息
+- 数据源配置类 DataSource1Config、DataSource2Config
+
+
