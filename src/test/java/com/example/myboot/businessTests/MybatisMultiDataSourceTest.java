@@ -3,6 +3,7 @@ package com.example.myboot.businessTests;
 import com.example.myboot.domain.User;
 import com.example.myboot.mapper.UserMapper;
 import com.example.myboot.mapper2.UserMapper2;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,13 @@ public class MybatisMultiDataSourceTest {
     @Autowired
     UserMapper2 userMapper2;
     @Test
+    @Ignore
     public void test(){
         System.out.println("基于mybatis注解方式查询User：" + userMapper.getAll());
     }
 
     @Test
+    @Ignore
     public void test2(){
         System.out.println("基于mybatis XML配置方式查询User：" + userMapper.selectByCnd(User.builder()
                 .userName("aa1")
@@ -34,6 +37,7 @@ public class MybatisMultiDataSourceTest {
     }
 
     @Test
+    @Ignore
     public void test3(){
         System.out.println("数据源2----基于mybatis注解方式查询User：" + userMapper2.getAll());
     }

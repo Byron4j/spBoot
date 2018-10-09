@@ -26,3 +26,11 @@ SpringBoot 系列笔记
 - 数据源配置类 DataSource1Config、DataSource2Config
 
 
+### 集成RabbitMQ
+
+- 添加依赖： spring-boot-starter-amqp
+- 添加配置
+- 添加生成Queue的bean： RabbitConfig
+- 添加接收者，监听指定的Queue
+- 编写单元测试类
+
