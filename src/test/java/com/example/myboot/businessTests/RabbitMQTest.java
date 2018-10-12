@@ -5,7 +5,6 @@ import com.example.myboot.rabbitMQ.HelloSender;
 import com.example.myboot.rabbitMQ.HelloSender2;
 import com.example.myboot.rabbitMQ.exchange.Sender;
 import com.example.myboot.rabbitMQ.exchange.Sender2;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,6 @@ public class RabbitMQTest {
      * 多个发送者、多个消费者
       */
     @Test
-    @Ignore
     public void test(){
         for(int i=1 ; i <= 10; i++){
             // 发送消息到 队列 myQueue 中； 前提是 myQueue 已经存在了。
@@ -52,5 +50,9 @@ public class RabbitMQTest {
     public void test2(){
         sender.send("sender1");
         sender2.send("sender2");
+
+        for ( StackTraceElement ele : Thread.currentThread().getStackTrace()) {
+            System.out.println("线程栈信息输出：" + ele.getClassName() + "$" + ele.getMethodName() + "$" + ele.getFileName() + "$" + ele.getLineNumber());
+        }
     }
 }

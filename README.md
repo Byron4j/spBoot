@@ -34,3 +34,13 @@ SpringBoot 系列笔记
 - 添加接收者，监听指定的Queue
 - 编写单元测试类
 
+### 定时任务
+
+- 在启动类上SpringApplication加上 @EnableScheduling 注解即可
+- 编写定时任务类，方法加上注解 @Scheduled
+
+
+### 发送邮件
+
+- 增加依赖spring-boot-starter-mail
+-
