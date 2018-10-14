@@ -21,7 +21,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.9</java.version>
+        <java.version>1.8</java.version>
     </properties>
 
     <!--java9支持-->
@@ -146,17 +146,35 @@
         </dependency>
 
         <!-- 将作为Redis对象序列化器 -->
-       <!-- <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.47</version>
-        </dependency>-->
+        <!-- <dependency>
+             <groupId>com.alibaba</groupId>
+             <artifactId>fastjson</artifactId>
+             <version>1.2.47</version>
+         </dependency>-->
 
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
+
+        <!--添加mybati依赖-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>LATEST</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
 
     </dependencies>
 
@@ -192,8 +210,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>1.9</source>
-                    <target>1.9</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
