@@ -2,6 +2,7 @@
 SpringBoot 系列笔记
 
 
+
 ### mybatis集成
 
 - 数据库datasource配置在application.properties中
